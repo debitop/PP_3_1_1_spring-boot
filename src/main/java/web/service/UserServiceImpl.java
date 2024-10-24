@@ -5,11 +5,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
 import web.repositories.UserRepository;
+
 import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
